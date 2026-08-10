@@ -31,7 +31,7 @@ export default function Hero() {
         <img
           src={heroBg}
           alt="3D illustration of María Aguilera working at her laptop"
-          className="h-full w-full origin-top-right scale-110 object-contain object-right"
+          className="h-full w-full object-contain object-right"
           draggable={false}
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_24%,transparent_52%)]" />

@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 const skills = [
   "UX Research",
-  "Diseño de interacción",
-  "Diseño UI",
-  "Arquitectura de información",
-  "Prototipado",
-  "Pruebas de usabilidad",
+  "Interaction Design",
+  "UI Design",
+  "Information Architecture",
+  "Prototyping",
+  "Usability Testing",
 ];
 
 export default function About() {
@@ -23,32 +23,32 @@ export default function About() {
           transition={{ duration: 0.5 }}
         >
           <span className="text-xs font-semibold tracking-[0.3em] text-violet-400">
-            SOBRE MÍ
+            ABOUT ME
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-ink sm:text-4xl">
-            Diseño con intención,
+            I design with intention,
             <br />
-            construyo con código.
+            I build with code.
           </h2>
 
           <div className="mt-6 space-y-4 text-ink-dim">
             <p>
-              Diseñadora UX/UI certificada y Front-End en formación. Me
-              motiva resolver problemas reales a través de soluciones
-              digitales centradas en las personas.
+              Certified UX/UI Designer and Front-End Developer in training.
+              I'm driven by solving real problems through digital solutions
+              centered on people.
             </p>
             <p>
-              Curiosa, creativa y en constante aprendizaje — disfruto llevar
-              una idea desde la investigación y el wireframe hasta una
-              interfaz funcional en el navegador.
+              Curious, creative, and always learning — I love taking an idea
+              from research and wireframes all the way to a working
+              interface in the browser.
             </p>
           </div>
 
           <div className="mt-8 flex items-center gap-3 rounded-xl border border-white/10 bg-surface px-4 py-3 w-fit">
             <span className="text-xs uppercase tracking-wide text-ink-faint">
-              Ubicación
+              Location
             </span>
-            <span className="text-sm font-medium text-ink">Latinoamérica</span>
+            <span className="text-sm font-medium text-ink">Latin America</span>
           </div>
         </motion.div>
 
@@ -59,7 +59,7 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <span className="text-xs font-semibold tracking-[0.3em] text-ink-faint">
-            ENFOQUE
+            FOCUS
           </span>
           <div className="mt-4 grid grid-cols-2 gap-3">
             {skills.map((skill) => (

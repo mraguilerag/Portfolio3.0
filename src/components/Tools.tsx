@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { designTools, frontEndTools, otherTools } from "../data/skills";
 
 const groups = [
-  { title: "Diseño", items: designTools },
+  { title: "Design", items: designTools },
   { title: "Front-End", items: frontEndTools },
-  { title: "Herramientas", items: otherTools },
+  { title: "Tools", items: otherTools },
 ];
 
 export default function Tools() {
@@ -25,7 +25,7 @@ export default function Tools() {
             STACK
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-ink sm:text-4xl">
-            Herramientas y tecnologías
+            Tools & technologies
           </h2>
         </motion.div>
 

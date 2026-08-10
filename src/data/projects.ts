@@ -10,34 +10,34 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "App de recetas — Caso de estudio UX/UI",
+    title: "Recipe App — UX/UI Case Study",
     description:
-      "Aplicación móvil diseñada con un proceso centrado en el usuario: investigación, arquitectura de información, UI y validación mediante pruebas de usabilidad.",
+      "Mobile app designed with a user-centered process: research, information architecture, UI, and validation through usability testing.",
     role: "UX Research · UI Design",
-    tech: ["Figma", "UX Research", "Prototipado"],
-    linkLabel: "Agregar link al case study",
+    tech: ["Figma", "UX Research", "Prototyping"],
+    linkLabel: "Add case study link",
   },
   {
-    title: "Plataforma de iluminación y paneles solares",
+    title: "Lighting & Solar Panels Platform",
     description:
-      "Sitio web para una empresa de iluminación y paneles solares, integrando diseño UX/UI y herramientas de IA para optimizar la experiencia de compra.",
+      "Website for a lighting and solar panel company, blending UX/UI design with AI tools to optimize the shopping experience.",
     role: "UI Design · Front-End Development",
-    tech: ["Figma", "React", "IA"],
-    linkLabel: "Agregar link al proyecto",
+    tech: ["Figma", "React", "AI"],
+    linkLabel: "Add project link",
   },
   {
-    title: "Tu próximo proyecto",
+    title: "Your next project",
     description:
-      "Espacio reservado para tu tercer proyecto destacado — reemplaza este texto con el caso de estudio, capturas y resultados.",
-    role: "Rol por definir",
+      "Reserved space for your third featured project — replace this text with the case study, screenshots, and results.",
+    role: "Role TBD",
     tech: ["Tech", "Stack"],
     placeholder: true,
   },
   {
-    title: "Tu próximo proyecto",
+    title: "Your next project",
     description:
-      "Espacio reservado para tu cuarto proyecto destacado — reemplaza este texto con el caso de estudio, capturas y resultados.",
-    role: "Rol por definir",
+      "Reserved space for your fourth featured project — replace this text with the case study, screenshots, and results.",
+    role: "Role TBD",
     tech: ["Tech", "Stack"],
     placeholder: true,
   },

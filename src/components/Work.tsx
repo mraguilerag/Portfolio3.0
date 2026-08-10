@@ -17,14 +17,14 @@ export default function Work() {
           className="mb-14 max-w-xl"
         >
           <span className="text-xs font-semibold tracking-[0.3em] text-violet-400">
-            PROYECTOS
+            PROJECTS
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-ink sm:text-4xl">
-            Proyectos destacados
+            Featured projects
           </h2>
           <p className="mt-4 text-ink-dim">
-            Una selección de trabajos donde combino investigación UX, diseño
-            de interfaces y desarrollo front-end.
+            A selection of work where I combine UX research, interface
+            design, and front-end development.
           </p>
         </motion.div>
 
@@ -78,12 +78,12 @@ export default function Work() {
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-300 hover:text-violet-200"
                   >
-                    Ver proyecto
+                    View project
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
                 ) : (
                   <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-faint">
-                    {project.linkLabel ?? "Link próximamente"}
+                    {project.linkLabel ?? "Link coming soon"}
                   </span>
                 )}
               </div>

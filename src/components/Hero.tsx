@@ -30,8 +30,8 @@ export default function Hero() {
       <div className="absolute inset-x-0 top-0 z-0 hidden h-screen lg:block">
         <img
           src={heroBg}
-          alt="Ilustración 3D de María Aguilera trabajando en su laptop"
-          className="h-full w-full object-contain object-right"
+          alt="3D illustration of María Aguilera working at her laptop"
+          className="h-full w-full origin-top-right scale-110 object-contain object-right"
           draggable={false}
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_24%,transparent_52%)]" />
@@ -41,7 +41,7 @@ export default function Hero() {
 
       <div className="pointer-events-none absolute -left-40 top-1/3 z-0 h-96 w-96 rounded-full bg-violet-700/20 blur-[120px]" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pb-16 pt-24 lg:px-12 lg:pt-20">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pb-16 pt-24 lg:pl-28 lg:pr-12 lg:pt-20 xl:pl-40">
         <div>
           <motion.p
             initial="hidden"
@@ -87,8 +87,8 @@ export default function Hero() {
             variants={fadeUp}
             className="mt-5 max-w-md text-base leading-relaxed text-ink-dim"
           >
-            Diseño experiencias digitales intuitivas y las llevo a la vida en
-            la web.
+            I design intuitive digital experiences and bring them to life on
+            the web.
           </motion.p>
         </div>
 
@@ -177,7 +177,7 @@ export default function Hero() {
         >
           <img
             src={heroBg}
-            alt="Ilustración 3D de María Aguilera trabajando en su laptop"
+            alt="3D illustration of María Aguilera working at her laptop"
             className="h-64 w-full object-cover object-[65%_30%] sm:h-80"
             draggable={false}
           />

@@ -17,14 +17,14 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
         >
           <span className="text-xs font-semibold tracking-[0.3em] text-violet-400">
-            CONTACTO
+            CONTACT
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-ink sm:text-5xl">
-            Trabajemos juntos
+            Let's work together
           </h2>
           <p className="mx-auto mt-4 max-w-md text-ink-dim">
-            ¿Tienes un proyecto en mente o buscas sumar a alguien con mirada
-            UX/UI y front-end? Hablemos.
+            Have a project in mind, or looking to add someone with a UX/UI
+            and front-end eye to your team? Let's talk.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
@@ -33,7 +33,7 @@ export default function Contact() {
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-violet-700 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_30px_-8px_rgba(139,63,240,0.8)] transition-transform hover:scale-[1.03]"
             >
               <Mail className="h-4 w-4" />
-              Contrátame
+              Hire me
             </a>
             <a
               href="/cv.pdf"
@@ -41,7 +41,7 @@ export default function Contact() {
               className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-violet-500/40 hover:text-violet-300"
             >
               <Download className="h-4 w-4" />
-              Descargar CV
+              Download CV
             </a>
           </div>
 

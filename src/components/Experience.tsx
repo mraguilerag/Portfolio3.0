@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 
 const timeline = [
   {
-    period: "2026 — Actualidad",
-    title: "Plataforma web · Iluminación y paneles solares",
-    place: "Proyecto independiente",
+    period: "2026 — Present",
+    title: "Web Platform · Lighting & Solar Panels",
+    place: "Independent project",
     description:
-      "Diseño y desarrollo de una plataforma web para una empresa de iluminación y paneles solares, integrando UX/UI y herramientas de IA.",
+      "Design and development of a website for a lighting and solar panel company, integrating UX/UI and AI tools.",
   },
   {
     period: "2024 — 2025",
     title: "UX/UI Designer",
     place: "Desafío Latam",
     description:
-      "Formación intensiva en diseño UX/UI: investigación de usuarios, arquitectura de información, prototipado y pruebas de usabilidad aplicadas a un caso de estudio real.",
+      "Intensive UX/UI design training: user research, information architecture, prototyping, and usability testing applied to a real case study.",
   },
 ];
 
@@ -32,10 +32,10 @@ export default function Experience() {
           className="mb-14"
         >
           <span className="text-xs font-semibold tracking-[0.3em] text-violet-400">
-            EXPERIENCIA
+            EXPERIENCE
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-ink sm:text-4xl">
-            Mi trayectoria
+            My journey
           </h2>
         </motion.div>
 

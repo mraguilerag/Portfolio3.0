@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-bg: #08070c;
+  --color-surface: #120f1a;
+  --color-surface-raised: #191423;
+
+  --color-ink: #f6f4f9;
+  --color-ink-dim: #a9a5b4;
+  --color-ink-faint: #6f6b7c;
+
+  --color-violet-400: #c4a5fb;
+  --color-violet-500: #a855f7;
+  --color-violet-600: #8b3ff0;
+  --color-violet-700: #7c3aed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+}
+
+::selection {
+  background-color: var(--color-violet-600);
+  color: white;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}

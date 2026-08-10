@@ -25,23 +25,24 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen w-full overflow-hidden bg-bg"
+      className="relative min-h-[100dvh] w-full overflow-hidden bg-bg"
     >
-      <div className="absolute inset-x-0 top-0 z-0 hidden h-screen lg:block">
+      <div className="absolute inset-0 z-0">
         <img
           src={heroBg}
           alt="3D illustration of María Aguilera working at her laptop"
-          className="h-full w-full object-contain object-right"
+          className="h-full w-full object-cover object-[75%_18%] lg:object-[100%_22%]"
           draggable={false}
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_24%,transparent_52%)]" />
+        <div className="absolute inset-0 bg-bg/60 lg:hidden" />
+        <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_24%,transparent_52%)] lg:block" />
         <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-bg to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-bg" />
       </div>
 
       <div className="pointer-events-none absolute -left-40 top-1/3 z-0 h-96 w-96 rounded-full bg-violet-700/20 blur-[120px]" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pb-16 pt-24 lg:pl-28 lg:pr-12 lg:pt-20 xl:pl-40">
+      <div className="relative z-10 mx-auto flex min-h-[100dvh] max-w-7xl flex-col justify-center px-6 pb-16 pt-24 lg:pl-28 lg:pr-12 lg:pt-20 xl:pl-40">
         <div>
           <motion.p
             initial="hidden"
@@ -168,21 +169,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-          className="relative mt-10 overflow-hidden rounded-3xl lg:hidden"
-        >
-          <img
-            src={heroBg}
-            alt="3D illustration of María Aguilera working at her laptop"
-            className="h-64 w-full object-cover object-[65%_30%] sm:h-80"
-            draggable={false}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent" />
-        </motion.div>
       </div>
     </section>
   );

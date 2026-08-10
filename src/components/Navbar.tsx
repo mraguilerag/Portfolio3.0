@@ -32,7 +32,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="hidden items-center gap-9 md:flex">
+        <div className="hidden items-center gap-9 md:ml-auto md:mr-9 md:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}

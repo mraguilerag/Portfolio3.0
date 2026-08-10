@@ -18,7 +18,6 @@ const bubbleLayout = [
   { size: 58, marginTop: 20, delay: 1.05 },
   { size: 66, marginTop: 42, delay: 1.2 },
   { size: 52, marginTop: 56, delay: 1.35 },
-  { size: 84, marginTop: 28, delay: 1.5 },
 ];
 
 export default function Hero() {
@@ -59,7 +58,7 @@ export default function Hero() {
             animate="show"
             custom={0.1}
             variants={fadeUp}
-            className="font-display text-5xl font-bold uppercase leading-[0.95] text-ink sm:text-6xl lg:text-7xl"
+            className="font-display text-5xl font-bold uppercase leading-[0.95] tracking-wider text-ink sm:text-6xl lg:text-7xl"
           >
             María
             <br />
@@ -88,8 +87,9 @@ export default function Hero() {
             variants={fadeUp}
             className="mt-5 max-w-md text-base leading-relaxed text-ink-dim"
           >
-            I design intuitive digital experiences and bring them to life on
-            the web.
+            I design intuitive digital experiences
+            <br />
+            and bring them to life on the web.
           </motion.p>
         </div>
 
@@ -123,15 +123,6 @@ export default function Hero() {
               >
                 See my work
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20 transition-transform group-hover:translate-x-0.5">
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </span>
-              </a>
-              <a
-                href="#about"
-                className="group inline-flex items-center gap-2 text-sm font-medium text-ink transition-colors hover:text-violet-300"
-              >
-                Learn more
-                <span className="flex h-6 w-6 items-center justify-center rounded-full border border-ink-dim/40 transition-transform group-hover:translate-x-0.5">
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </a>

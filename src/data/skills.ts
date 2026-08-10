@@ -3,7 +3,6 @@ import {
   SiFigma,
   SiSass,
   SiTypescript,
-  SiWebflow,
   SiSketch,
   SiHtml5,
   SiCss,
@@ -18,7 +17,6 @@ export const heroBubbles = [
   { label: "React", icon: FaReact, color: "#61DAFB" },
   { label: "Sass", icon: SiSass, color: "#CC6699" },
   { label: "TS", icon: SiTypescript, color: "#3178C6" },
-  { label: "Webflow", icon: SiWebflow, color: "#4353FF" },
 ];
 
 export const designTools = [

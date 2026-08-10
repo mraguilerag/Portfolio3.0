@@ -27,16 +27,16 @@ export default function Hero() {
       id="top"
       className="relative min-h-screen w-full overflow-hidden bg-bg"
     >
-      <div className="absolute inset-0 z-0 hidden lg:block">
+      <div className="absolute inset-x-0 top-0 z-0 hidden h-screen lg:block">
         <img
           src={heroBg}
           alt="Ilustración 3D de María Aguilera trabajando en su laptop"
-          className="h-full w-full object-cover object-[78%_center]"
+          className="h-full w-full object-contain object-right"
           draggable={false}
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_24%,transparent_52%)]" />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-bg to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent to-bg" />
+        <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-bg to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-bg" />
       </div>
 
       <div className="pointer-events-none absolute -left-40 top-1/3 z-0 h-96 w-96 rounded-full bg-violet-700/20 blur-[120px]" />

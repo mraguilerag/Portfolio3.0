@@ -30,7 +30,7 @@ export default function Contact() {
           <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
             <a
               href={`mailto:${EMAIL}`}
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-violet-700 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_30px_-8px_rgba(139,63,240,0.8)] transition-transform hover:scale-[1.03]"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 to-violet-700 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_30px_-8px_rgba(139,63,240,0.8)] transition-transform hover:scale-[1.03]"
             >
               <Mail className="h-4 w-4" />
               Hire me
@@ -38,7 +38,7 @@ export default function Contact() {
             <a
               href="/cv.pdf"
               download
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-violet-500/40 hover:text-violet-300"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-violet-500/40 hover:text-violet-300"
             >
               <Download className="h-4 w-4" />
               Download CV

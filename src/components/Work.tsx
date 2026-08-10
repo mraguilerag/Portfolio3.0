@@ -62,7 +62,7 @@ export default function Work() {
                   {project.tech.map((t) => (
                     <span
                       key={t}
-                      className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-ink-dim"
+                      className="rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-ink-dim"
                     >
                       {t}
                     </span>

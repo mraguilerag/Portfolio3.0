@@ -5,7 +5,6 @@ const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
   { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -47,7 +46,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <a
             href="#contact"
-            className="group inline-flex items-center gap-2 rounded-full border border-violet-500/40 bg-violet-500/10 px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-violet-500/20"
+            className="group inline-flex items-center gap-2 rounded-xl border border-violet-500/40 bg-violet-500/10 px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-violet-500/20"
           >
             Let's talk
           </a>
@@ -80,7 +79,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full border border-violet-500/40 bg-violet-500/10 px-5 py-2.5 text-sm font-medium text-ink"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl border border-violet-500/40 bg-violet-500/10 px-5 py-2.5 text-sm font-medium text-ink"
             >
               Let's talk
             </a>

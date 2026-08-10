@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import heroBg from "../assets/hero-bg.png";
 import { heroBubbles } from "../data/skills";
-import { socialLinks } from "../data/social";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -42,23 +41,8 @@ export default function Hero() {
       <div className="pointer-events-none absolute -left-48 top-1/4 z-0 h-72 w-72 rounded-full bg-violet-600/20 blur-[110px]" />
 
       <div className="relative z-10 mx-auto min-h-[100dvh] max-w-7xl">
-        <div className="hidden lg:flex lg:absolute lg:left-6 lg:top-1/2 lg:z-10 lg:-translate-y-1/2 lg:flex-col lg:items-center lg:gap-7 xl:left-10">
-          {socialLinks.map(({ label, href, icon: Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={label}
-              className="flex h-11 w-11 items-center justify-center rounded-full text-ink-dim transition-colors hover:bg-white/5 hover:text-violet-300"
-            >
-              <Icon className="h-6 w-6" />
-            </a>
-          ))}
-        </div>
-
         <div className="flex min-h-[100dvh] flex-col justify-center px-6 pb-16 pt-24 lg:pl-28 lg:pr-12 lg:pt-20 xl:pl-36">
-          <div className="mt-6 lg:mt-16">
+          <div className="mt-6 lg:mt-8">
             <motion.p
               initial="hidden"
               animate="show"
@@ -118,10 +102,10 @@ export default function Hero() {
           >
             <a
               href="#work"
-              className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-violet-500 to-violet-700 px-8 py-4 text-base font-semibold text-white shadow-[0_0_30px_-8px_rgba(139,63,240,0.8)] transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-violet-500 to-violet-700 px-8 py-4 text-base font-semibold text-white shadow-[0_0_30px_-8px_rgba(139,63,240,0.8)] transition-transform hover:scale-[1.03]"
             >
               See my work
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20 transition-transform group-hover:translate-x-0.5">
+              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/20 transition-transform group-hover:translate-x-0.5">
                 <ArrowRight className="h-4 w-4" />
               </span>
             </a>

@@ -45,7 +45,7 @@ export default function Tools() {
                 {group.items.map(({ label, icon: Icon }) => (
                   <div
                     key={label}
-                    className="flex items-center gap-2 rounded-full border border-white/10 bg-surface px-4 py-2.5 text-sm text-ink transition-colors hover:border-violet-500/40 hover:text-violet-300"
+                    className="flex items-center gap-2 rounded-lg border border-white/10 bg-surface px-4 py-2.5 text-sm text-ink transition-colors hover:border-violet-500/40 hover:text-violet-300"
                   >
                     <Icon className="h-4 w-4" />
                     {label}

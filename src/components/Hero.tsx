@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import heroAvatar from "../assets/hero-avatar.png";
+import heroBg from "../assets/hero-bg.png";
 import { heroBubbles } from "../data/skills";
 import { socialLinks } from "../data/social";
 
@@ -14,25 +14,86 @@ const fadeUp = {
 };
 
 const bubbleLayout = [
-  { size: 96, marginTop: 0, delay: 0.9 },
-  { size: 74, marginTop: 30, delay: 1.05 },
-  { size: 82, marginTop: 64, delay: 1.2 },
-  { size: 66, marginTop: 84, delay: 1.35 },
-  { size: 106, marginTop: 44, delay: 1.5 },
+  { size: 76, marginTop: 0, delay: 0.9 },
+  { size: 58, marginTop: 20, delay: 1.05 },
+  { size: 66, marginTop: 42, delay: 1.2 },
+  { size: 52, marginTop: 56, delay: 1.35 },
+  { size: 84, marginTop: 28, delay: 1.5 },
 ];
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-bg pt-32 pb-24 lg:pt-40 lg:pb-32"
+      className="relative min-h-screen w-full overflow-hidden bg-bg"
     >
-      <div className="pointer-events-none absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-violet-700/25 blur-[120px]" />
-      <div className="pointer-events-none absolute -right-20 top-10 h-[28rem] w-[28rem] rounded-full bg-violet-600/20 blur-[140px]" />
+      <div className="absolute inset-0 z-0 hidden lg:block">
+        <img
+          src={heroBg}
+          alt="Ilustración 3D de María Aguilera trabajando en su laptop"
+          className="h-full w-full object-cover object-[78%_center]"
+          draggable={false}
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_24%,transparent_52%)]" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-bg to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent to-bg" />
+      </div>
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:gap-8 lg:px-12">
-        <div className="relative flex gap-8">
-          <div className="hidden flex-col items-center gap-5 pt-3 lg:flex">
+      <div className="pointer-events-none absolute -left-40 top-1/3 z-0 h-96 w-96 rounded-full bg-violet-700/20 blur-[120px]" />
+
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6 pb-16 pt-24 lg:px-12 lg:pt-20">
+        <div>
+          <motion.p
+            initial="hidden"
+            animate="show"
+            custom={0}
+            variants={fadeUp}
+            className="mb-3 text-sm font-semibold tracking-[0.3em] text-violet-400"
+          >
+            HELLO, I'M
+          </motion.p>
+
+          <motion.h1
+            initial="hidden"
+            animate="show"
+            custom={0.1}
+            variants={fadeUp}
+            className="font-display text-5xl font-bold uppercase leading-[0.95] text-ink sm:text-6xl lg:text-7xl"
+          >
+            María
+            <br />
+            <span className="bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">
+              Aguilera
+            </span>
+          </motion.h1>
+
+          <motion.div
+            initial="hidden"
+            animate="show"
+            custom={0.25}
+            variants={fadeUp}
+            className="mt-5 flex items-center gap-3"
+          >
+            <span className="h-px w-8 bg-violet-500/60" />
+            <span className="text-xs font-semibold tracking-[0.2em] text-ink-dim">
+              UX/UI DESIGNER · FRONT-END IN TRAINING
+            </span>
+          </motion.div>
+
+          <motion.p
+            initial="hidden"
+            animate="show"
+            custom={0.35}
+            variants={fadeUp}
+            className="mt-5 max-w-md text-base leading-relaxed text-ink-dim"
+          >
+            Diseño experiencias digitales intuitivas y las llevo a la vida en
+            la web.
+          </motion.p>
+        </div>
+
+        <div className="mt-7 flex gap-8 lg:gap-10">
+          <div className="hidden flex-col items-center justify-center gap-5 lg:flex">
             {socialLinks.map(({ label, href, icon: Icon }) => (
               <a
                 key={label}
@@ -48,60 +109,12 @@ export default function Hero() {
           </div>
 
           <div>
-            <motion.p
-              initial="hidden"
-              animate="show"
-              custom={0}
-              variants={fadeUp}
-              className="mb-4 text-sm font-semibold tracking-[0.3em] text-violet-400"
-            >
-              HELLO, I'M
-            </motion.p>
-
-            <motion.h1
-              initial="hidden"
-              animate="show"
-              custom={0.1}
-              variants={fadeUp}
-              className="font-display text-5xl font-bold uppercase leading-[0.95] text-ink sm:text-6xl lg:text-7xl"
-            >
-              María
-              <br />
-              <span className="bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">
-                Aguilera
-              </span>
-            </motion.h1>
-
-            <motion.div
-              initial="hidden"
-              animate="show"
-              custom={0.25}
-              variants={fadeUp}
-              className="mt-6 flex items-center gap-3"
-            >
-              <span className="h-px w-8 bg-violet-500/60" />
-              <span className="text-xs font-semibold tracking-[0.2em] text-ink-dim">
-                UX/UI DESIGNER · FRONT-END IN TRAINING
-              </span>
-            </motion.div>
-
-            <motion.p
-              initial="hidden"
-              animate="show"
-              custom={0.35}
-              variants={fadeUp}
-              className="mt-6 max-w-md text-base leading-relaxed text-ink-dim"
-            >
-              Diseño experiencias digitales intuitivas y las llevo a la vida
-              en la web.
-            </motion.p>
-
             <motion.div
               initial="hidden"
               animate="show"
               custom={0.45}
               variants={fadeUp}
-              className="mt-9 flex flex-wrap items-center gap-6"
+              className="flex flex-wrap items-center gap-6"
             >
               <a
                 href="#work"
@@ -123,7 +136,7 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            <div className="mt-10 flex flex-wrap items-start gap-4">
+            <div className="mt-7 flex flex-wrap items-start gap-3">
               {heroBubbles.map(({ label, icon: Icon, color }, i) => {
                 const { size, marginTop, delay } = bubbleLayout[i];
                 return (
@@ -142,10 +155,10 @@ export default function Hero() {
                         ease: "easeInOut",
                       }}
                       style={{ width: size, height: size }}
-                      className="flex flex-col items-center justify-center gap-1 rounded-full border border-violet-400/30 bg-surface/80 shadow-[0_0_25px_-6px_rgba(139,63,240,0.6)] backdrop-blur-sm"
+                      className="flex flex-col items-center justify-center gap-0.5 rounded-full border border-violet-400/30 bg-surface/80 shadow-[0_0_25px_-6px_rgba(139,63,240,0.6)] backdrop-blur-sm"
                     >
                       <Icon style={{ color }} className="h-1/3 w-1/3" />
-                      <span className="text-[10px] font-medium text-ink-dim">
+                      <span className="text-[9px] font-medium text-ink-dim">
                         {label}
                       </span>
                     </motion.div>
@@ -157,19 +170,18 @@ export default function Hero() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative mx-auto w-full max-w-md lg:max-w-none"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+          className="relative mt-10 overflow-hidden rounded-3xl lg:hidden"
         >
-          <div className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-violet-600/25 blur-[100px]" />
-
           <img
-            src={heroAvatar}
+            src={heroBg}
             alt="Ilustración 3D de María Aguilera trabajando en su laptop"
-            className="relative z-10 w-full select-none"
+            className="h-64 w-full object-cover object-[65%_30%] sm:h-80"
             draggable={false}
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent" />
         </motion.div>
       </div>
     </section>

@@ -19,8 +19,11 @@ const timeline = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative bg-bg py-24 lg:py-32">
-      <div className="mx-auto max-w-4xl px-6 lg:px-12">
+    <section id="experience" className="relative overflow-hidden bg-bg py-24 lg:py-32">
+      <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-violet-700/15 blur-[130px]" />
+      <div className="pointer-events-none absolute -left-24 bottom-1/4 h-72 w-72 rounded-full bg-violet-600/10 blur-[120px]" />
+
+      <div className="relative mx-auto max-w-4xl px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

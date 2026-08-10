@@ -4,8 +4,11 @@ import { projects } from "../data/projects";
 
 export default function Work() {
   return (
-    <section id="work" className="relative bg-bg py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+    <section id="work" className="relative overflow-hidden bg-bg py-24 lg:py-32">
+      <div className="pointer-events-none absolute -left-24 top-1/4 h-96 w-96 rounded-full bg-violet-700/15 blur-[140px]" />
+      <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-violet-600/10 blur-[130px]" />
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

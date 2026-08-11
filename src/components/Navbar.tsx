@@ -27,7 +27,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
         <a href="#top" className="group flex items-center">
-          <span className="bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text font-display text-2xl font-bold tracking-tight text-transparent transition-transform duration-300 group-hover:scale-105">
+          <span className="bg-gradient-to-r from-white via-white to-slate-200 bg-clip-text font-display text-2xl font-bold tracking-tight text-transparent drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] transition-transform duration-300 group-hover:scale-105">
             M/A
           </span>
         </a>

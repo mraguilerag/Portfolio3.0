@@ -14,10 +14,10 @@ const fadeUp = {
 };
 
 const bubbleLayout = [
-  { size: 64, marginTop: 0, delay: 0.9 },
-  { size: 48, marginTop: 18, delay: 1.05 },
-  { size: 56, marginTop: 36, delay: 1.2 },
-  { size: 44, marginTop: 48, delay: 1.35 },
+  { size: 58, marginTop: 0, delay: 0.9 },
+  { size: 43, marginTop: 16, delay: 1.05 },
+  { size: 50, marginTop: 32, delay: 1.2 },
+  { size: 40, marginTop: 43, delay: 1.35 },
 ];
 
 export default function Hero() {
@@ -35,7 +35,7 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-bg/60 lg:hidden" />
         <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_24%,transparent_52%)] lg:block" />
-        <div className="absolute inset-y-0 right-0 z-[1] hidden w-[30%] bg-gradient-to-l from-bg/45 via-bg/10 to-transparent lg:block" />
+        <div className="absolute inset-y-0 right-0 z-[1] hidden w-[30%] bg-gradient-to-l from-bg/58 via-bg/20 to-transparent blur-md lg:block" />
         <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-bg to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-bg" />
       </div>
@@ -135,7 +135,7 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <div className="mt-7 flex flex-wrap items-start gap-3">
+          <div className="mt-[18px] flex flex-wrap items-start gap-4">
             {heroBubbles.map(({ label, icon: Icon, color }, i) => {
               const { size, marginTop, delay } = bubbleLayout[i];
               return (
@@ -154,9 +154,12 @@ export default function Hero() {
                       ease: "easeInOut",
                     }}
                     style={{ width: size, height: size }}
-                    className="flex flex-col items-center justify-center gap-0.5 rounded-full border border-violet-400/15 bg-surface/60 shadow-[0_0_12px_-6px_rgba(139,63,240,0.35)] opacity-80 backdrop-blur-sm transition-opacity hover:opacity-100"
+                    className="flex flex-col items-center justify-center gap-0.5 rounded-full border border-violet-400/10 bg-surface/60 shadow-[0_0_9px_-6px_rgba(139,63,240,0.25)] opacity-80 backdrop-blur-sm transition-opacity hover:opacity-100"
                   >
-                    <Icon style={{ color }} className="h-1/3 w-1/3 opacity-80" />
+                    <Icon
+                      style={{ color }}
+                      className={`h-4 opacity-80 ${label === "Figma" ? "w-auto" : "w-4"}`}
+                    />
                     <span className="text-[9px] font-medium text-ink-faint">
                       {label}
                     </span>

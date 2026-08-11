@@ -6,6 +6,7 @@ export type Project = {
   link?: string;
   linkLabel?: string;
   placeholder?: boolean;
+  image?: string;
 };
 
 export const projects: Project[] = [

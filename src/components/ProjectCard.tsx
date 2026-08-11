@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { ArrowUpRight, LayoutTemplate } from "lucide-react";
 import type { Project } from "../data/projects";
+import BorderGlow from "./BorderGlow";
 
 const springValues = {
   damping: 30,
@@ -46,7 +47,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   }
 
   return (
-    <div style={{ perspective: 1200 }}>
+    <div style={{ perspective: 1200 }} className="h-full">
       <motion.article
         ref={ref}
         initial={{ opacity: 0, y: 24 }}
@@ -57,65 +58,71 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{ rotateX, rotateY, scale, transformStyle: "preserve-3d" }}
-        className={`group flex flex-col overflow-hidden rounded-2xl border bg-surface transition-colors ${
-          project.placeholder
-            ? "border-dashed border-white/15 hover:border-violet-500/40"
-            : "border-white/10 hover:border-violet-500/40"
-        }`}
+        className="h-full"
       >
-        {project.image ? (
-          <img
-            src={project.image}
-            alt={project.title}
-            className="h-44 w-full object-cover"
-          />
-        ) : (
-          <div className="flex h-44 items-center justify-center bg-gradient-to-br from-violet-700/20 via-surface to-surface-raised">
-            <LayoutTemplate className="h-10 w-10 text-violet-400/60" />
+        <BorderGlow
+          borderRadius={16}
+          backgroundColor="#120f1a"
+          glowRadius={24}
+          edgeSensitivity={35}
+          className={`h-full ${project.placeholder ? "opacity-90" : ""}`}
+        >
+          <div className="flex h-full flex-col overflow-hidden rounded-2xl">
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-44 w-full object-cover"
+              />
+            ) : (
+              <div className="flex h-44 items-center justify-center bg-gradient-to-br from-violet-700/20 via-surface to-surface-raised">
+                <LayoutTemplate className="h-10 w-10 text-violet-400/60" />
+              </div>
+            )}
+
+            <div className="flex flex-1 flex-col p-6">
+              <h3 className="font-display text-lg font-semibold text-ink">
+                {project.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-dim">
+                {project.description}
+              </p>
+
+              <p className="mt-4 text-xs font-medium uppercase tracking-wide text-violet-400">
+                {project.role}
+              </p>
+
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-ink-dim"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 flex-1" />
+
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-300 hover:text-violet-200"
+                >
+                  View project
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              ) : (
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-faint">
+                  {project.linkLabel ?? "Link coming soon"}
+                </span>
+              )}
+            </div>
           </div>
-        )}
-
-        <div className="flex flex-1 flex-col p-6">
-          <h3 className="font-display text-lg font-semibold text-ink">
-            {project.title}
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-ink-dim">
-            {project.description}
-          </p>
-
-          <p className="mt-4 text-xs font-medium uppercase tracking-wide text-violet-400">
-            {project.role}
-          </p>
-
-          <div className="mt-3 flex flex-wrap gap-2">
-            {project.tech.map((t) => (
-              <span
-                key={t}
-                className="rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-ink-dim"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-6 flex-1" />
-
-          {project.link ? (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-300 hover:text-violet-200"
-            >
-              View project
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-          ) : (
-            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-faint">
-              {project.linkLabel ?? "Link coming soon"}
-            </span>
-          )}
-        </div>
+        </BorderGlow>
       </motion.article>
     </div>
   );

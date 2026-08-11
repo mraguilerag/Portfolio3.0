@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { designTools, frontEndTools, otherTools } from "../data/skills";
+import BorderGlow from "./BorderGlow";
 
 const groups = [
   { title: "Design", items: designTools },
@@ -43,13 +44,18 @@ export default function Tools() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {group.items.map(({ label, icon: Icon }) => (
-                  <div
+                  <BorderGlow
                     key={label}
-                    className="flex items-center gap-2 rounded-lg border border-white/10 bg-surface px-4 py-2.5 text-sm text-ink transition-colors hover:border-violet-500/40 hover:text-violet-300"
+                    borderRadius={8}
+                    backgroundColor="#120f1a"
+                    glowRadius={14}
+                    edgeSensitivity={35}
                   >
-                    <Icon className="h-4 w-4" />
-                    {label}
-                  </div>
+                    <div className="flex items-center gap-2 px-4 py-2.5 text-sm text-ink transition-colors hover:text-violet-300">
+                      <Icon className="h-4 w-4" />
+                      {label}
+                    </div>
+                  </BorderGlow>
                 ))}
               </div>
             </motion.div>

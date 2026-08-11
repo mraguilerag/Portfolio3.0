@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Download, Mail } from "lucide-react";
 import { socialLinks } from "../data/social";
+import BorderGlow from "./BorderGlow";
 
 const EMAIL = "mraguilerag@gmail.com";
 
@@ -35,14 +36,21 @@ export default function Contact() {
               <Mail className="h-4 w-4" />
               Hire me
             </a>
-            <a
-              href="/cv.pdf"
-              download
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-violet-500/40 hover:text-violet-300"
+            <BorderGlow
+              borderRadius={12}
+              backgroundColor="transparent"
+              glowRadius={18}
+              edgeSensitivity={35}
             >
-              <Download className="h-4 w-4" />
-              Download CV
-            </a>
+              <a
+                href="/cv.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-ink transition-colors hover:text-violet-300"
+              >
+                <Download className="h-4 w-4" />
+                Download CV
+              </a>
+            </BorderGlow>
           </div>
 
           <div className="mt-10 flex items-center justify-center gap-6">

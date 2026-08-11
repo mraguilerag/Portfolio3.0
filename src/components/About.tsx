@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import BorderGlow from "./BorderGlow";
 
 const skills = [
   "UX Research",
@@ -63,12 +64,17 @@ export default function About() {
           </span>
           <div className="mt-4 grid grid-cols-2 gap-3">
             {skills.map((skill) => (
-              <div
+              <BorderGlow
                 key={skill}
-                className="rounded-xl border border-white/10 bg-surface px-4 py-4 text-sm font-medium text-ink transition-colors hover:border-violet-500/40"
+                borderRadius={12}
+                backgroundColor="#120f1a"
+                glowRadius={16}
+                edgeSensitivity={35}
               >
-                {skill}
-              </div>
+                <div className="px-4 py-4 text-sm font-medium text-ink transition-colors">
+                  {skill}
+                </div>
+              </BorderGlow>
             ))}
           </div>
         </motion.div>

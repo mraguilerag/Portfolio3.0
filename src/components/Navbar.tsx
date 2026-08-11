@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import BorderGlow from "./BorderGlow";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -44,12 +45,19 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <a
-            href="#contact"
-            className="group inline-flex items-center gap-2 rounded-xl border border-violet-500/40 bg-violet-500/10 px-5 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-violet-500/20"
+          <BorderGlow
+            borderRadius={12}
+            backgroundColor="rgba(139, 63, 240, 0.1)"
+            glowRadius={16}
+            edgeSensitivity={35}
           >
-            Let's talk
-          </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-ink transition-colors"
+            >
+              Let's talk
+            </a>
+          </BorderGlow>
         </div>
 
         <button
@@ -76,13 +84,22 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl border border-violet-500/40 bg-violet-500/10 px-5 py-2.5 text-sm font-medium text-ink"
-            >
-              Let's talk
-            </a>
+            <div className="mt-2">
+              <BorderGlow
+                borderRadius={12}
+                backgroundColor="rgba(139, 63, 240, 0.1)"
+                glowRadius={16}
+                edgeSensitivity={35}
+              >
+                <a
+                  href="#contact"
+                  onClick={() => setOpen(false)}
+                  className="flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-ink"
+                >
+                  Let's talk
+                </a>
+              </BorderGlow>
+            </div>
           </div>
         </div>
       )}

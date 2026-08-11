@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import heroBg from "../assets/hero-bg.png";
 import { heroBubbles } from "../data/skills";
+import DepthText from "./DepthText";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -58,13 +59,35 @@ export default function Hero() {
               animate="show"
               custom={0.1}
               variants={fadeUp}
-              className="font-display text-5xl font-bold uppercase leading-[0.9] tracking-widest text-ink sm:text-6xl lg:text-7xl"
             >
-              María
-              <br />
-              <span className="bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">
-                Aguilera
-              </span>
+              <div>
+                <DepthText
+                  text="MARÍA"
+                  className="font-display"
+                  faceColor="#f6f4f9"
+                  depthColor="#8b3ff0"
+                  fontSize="clamp(2.75rem, 9vw, 6rem)"
+                  fontWeight={800}
+                  layers={28}
+                  depth={2}
+                  tilt={7}
+                  orbitSpeed={0.3}
+                />
+              </div>
+              <div>
+                <DepthText
+                  text="AGUILERA"
+                  className="font-display"
+                  faceColor="#f6f4f9"
+                  depthColor="#8b3ff0"
+                  fontSize="clamp(2.75rem, 9vw, 6rem)"
+                  fontWeight={800}
+                  layers={28}
+                  depth={2}
+                  tilt={7}
+                  orbitSpeed={0.3}
+                />
+              </div>
             </motion.h1>
 
             <motion.div

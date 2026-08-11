@@ -14,10 +14,10 @@ const fadeUp = {
 };
 
 const bubbleLayout = [
-  { size: 76, marginTop: 0, delay: 0.9 },
-  { size: 58, marginTop: 20, delay: 1.05 },
-  { size: 66, marginTop: 42, delay: 1.2 },
-  { size: 52, marginTop: 56, delay: 1.35 },
+  { size: 64, marginTop: 0, delay: 0.9 },
+  { size: 48, marginTop: 18, delay: 1.05 },
+  { size: 56, marginTop: 36, delay: 1.2 },
+  { size: 44, marginTop: 48, delay: 1.35 },
 ];
 
 export default function Hero() {
@@ -35,11 +35,12 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-bg/60 lg:hidden" />
         <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_24%,transparent_52%)] lg:block" />
+        <div className="absolute inset-y-0 right-0 z-[1] hidden w-[30%] bg-gradient-to-l from-bg/45 via-bg/10 to-transparent lg:block" />
         <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-bg to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-bg" />
       </div>
 
-      <div className="pointer-events-none absolute -left-48 top-1/4 z-0 h-72 w-72 rounded-full bg-violet-600/20 blur-[110px]" />
+      <div className="pointer-events-none absolute -left-48 top-1/4 z-0 h-72 w-72 rounded-full bg-violet-600/12 blur-[130px]" />
 
       <div className="relative z-10 mx-auto min-h-[100dvh] max-w-7xl">
         <div className="flex min-h-[100dvh] flex-col justify-center px-6 pb-16 pt-24 lg:pl-28 lg:pr-12 lg:pt-20 xl:pl-36">
@@ -125,7 +126,7 @@ export default function Hero() {
           >
             <a
               href="#work"
-              className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-violet-500 to-violet-700 px-8 py-4 text-base font-semibold text-white shadow-[0_0_30px_-8px_rgba(139,63,240,0.8)] transition-transform hover:scale-[1.03]"
+              className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-violet-600 to-violet-800 px-8 py-4 text-base font-semibold text-white shadow-[0_4px_18px_-6px_rgba(139,63,240,0.3)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_28px_-4px_rgba(139,63,240,0.7)]"
             >
               See my work
               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/20 transition-transform group-hover:translate-x-0.5">
@@ -146,17 +147,17 @@ export default function Hero() {
                   style={{ marginTop }}
                 >
                   <motion.div
-                    animate={{ y: [0, -8, 0] }}
+                    animate={{ y: [0, -5, 0] }}
                     transition={{
                       duration: 3 + i * 0.4,
                       repeat: Infinity,
                       ease: "easeInOut",
                     }}
                     style={{ width: size, height: size }}
-                    className="flex flex-col items-center justify-center gap-0.5 rounded-full border border-violet-400/30 bg-surface/80 shadow-[0_0_25px_-6px_rgba(139,63,240,0.6)] backdrop-blur-sm"
+                    className="flex flex-col items-center justify-center gap-0.5 rounded-full border border-violet-400/15 bg-surface/60 shadow-[0_0_12px_-6px_rgba(139,63,240,0.35)] opacity-80 backdrop-blur-sm transition-opacity hover:opacity-100"
                   >
-                    <Icon style={{ color }} className="h-1/3 w-1/3" />
-                    <span className="text-[9px] font-medium text-ink-dim">
+                    <Icon style={{ color }} className="h-1/3 w-1/3 opacity-80" />
+                    <span className="text-[9px] font-medium text-ink-faint">
                       {label}
                     </span>
                   </motion.div>

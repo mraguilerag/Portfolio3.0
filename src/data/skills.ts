@@ -1,26 +1,25 @@
 import { FaReact } from "react-icons/fa";
 import {
-  SiFigma,
-  SiSass,
-  SiTypescript,
   SiSketch,
   SiHtml5,
   SiCss,
   SiJavascript,
   SiGit,
+  SiGithub,
   SiStorybook,
 } from "react-icons/si";
-import { Code2, PenTool } from "lucide-react";
+import { Code2, PenTool, Sparkles } from "lucide-react";
+import FigmaLogo from "../components/icons/FigmaLogo";
 
 export const heroBubbles = [
-  { label: "Figma", icon: SiFigma, color: "#F24E1E" },
-  { label: "React", icon: FaReact, color: "#61DAFB" },
-  { label: "Sass", icon: SiSass, color: "#CC6699" },
-  { label: "TS", icon: SiTypescript, color: "#3178C6" },
+  { label: "Figma", icon: FigmaLogo, color: undefined },
+  { label: "GitHub", icon: SiGithub, color: "#F5F5F5" },
+  { label: "VS Code", icon: Code2, color: "#007ACC" },
+  { label: "AI", icon: Sparkles, color: "#c4a5fb" },
 ];
 
 export const designTools = [
-  { label: "Figma", icon: SiFigma },
+  { label: "Figma", icon: FigmaLogo },
   { label: "Adobe XD", icon: PenTool },
   { label: "Sketch", icon: SiSketch },
 ];

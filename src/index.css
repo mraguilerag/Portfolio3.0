@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Urbanist", "Inter", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --font-display: "Clash Display", "Geist", sans-serif;
+  --font-body: "Geist", sans-serif;
 
   --color-bg: #08070c;
   --color-surface: #120f1a;

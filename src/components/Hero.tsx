@@ -33,7 +33,7 @@ export default function Hero() {
           className="h-full w-full object-cover object-[47%_20%] lg:translate-x-12 lg:object-[100%_22%]"
           draggable={false}
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_40%,transparent_75%)] lg:hidden" />
+        <div className="absolute inset-0 bg-bg/60 lg:hidden" />
         <div className="absolute inset-0 hidden bg-[linear-gradient(90deg,var(--color-bg)_0%,var(--color-bg)_24%,transparent_52%)] lg:block" />
         <div className="absolute inset-y-0 right-0 z-[1] hidden w-[30%] bg-gradient-to-l from-bg/58 via-bg/20 to-transparent blur-md lg:block" />
         <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-bg to-transparent" />

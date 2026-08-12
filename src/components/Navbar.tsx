@@ -31,12 +31,12 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="hidden items-center gap-9 md:ml-auto md:mr-9 md:flex">
+        <div className="hidden items-center gap-12 md:ml-auto md:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-base font-semibold uppercase tracking-wide text-ink transition-colors hover:text-violet-400"
+              className="text-lg font-semibold uppercase tracking-wide text-ink transition-colors hover:text-violet-400"
             >
               {link.label}
             </a>

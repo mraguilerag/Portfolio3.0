@@ -50,7 +50,7 @@ export default function Hero() {
               animate="show"
               custom={0}
               variants={fadeUp}
-              className="mb-3 text-sm font-semibold tracking-[0.3em] text-violet-400"
+              className="mb-3 font-display text-xl font-medium tracking-wide text-violet-400 sm:text-2xl"
             >
               HELLO, I'M
             </motion.p>
@@ -67,7 +67,7 @@ export default function Hero() {
                   className="font-display"
                   faceColor="#f6f4f9"
                   depthColor="#8b3ff0"
-                  fontSize="clamp(2.75rem, 9vw, 6rem)"
+                  fontSize="clamp(2.4rem, 7.9vw, 5.25rem)"
                   fontWeight={600}
                   layers={28}
                   depth={2}
@@ -82,7 +82,7 @@ export default function Hero() {
                   className="font-display"
                   faceColor="#c4b5fd"
                   depthColor="#6d28d9"
-                  fontSize="clamp(2.75rem, 9vw, 6rem)"
+                  fontSize="clamp(2.4rem, 7.9vw, 5.25rem)"
                   fontWeight={600}
                   layers={28}
                   depth={2}
@@ -101,7 +101,7 @@ export default function Hero() {
               className="mt-5 flex items-center gap-3"
             >
               <span className="h-px w-8 bg-violet-500/60" />
-              <span className="text-xs font-semibold tracking-[0.2em] text-ink-dim">
+              <span className="font-display text-base font-medium tracking-[0.1em] text-ink-dim sm:text-lg">
                 UX/UI DESIGNER · FRONT-END IN TRAINING
               </span>
             </motion.div>

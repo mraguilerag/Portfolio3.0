@@ -23,7 +23,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-xs font-semibold tracking-[0.3em] text-violet-400">
+          <span className="font-display text-xl font-medium tracking-wide text-violet-400 sm:text-2xl">
             ABOUT ME
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-ink sm:text-4xl">

@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import BorderGlow from "./BorderGlow";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
-  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -44,22 +43,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:block">
-          <BorderGlow
-            borderRadius={12}
-            backgroundColor="rgba(139, 63, 240, 0.1)"
-            glowRadius={16}
-            edgeSensitivity={35}
-          >
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-ink transition-colors"
-            >
-              Let's talk
-            </a>
-          </BorderGlow>
-        </div>
-
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -84,22 +67,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <div className="mt-2">
-              <BorderGlow
-                borderRadius={12}
-                backgroundColor="rgba(139, 63, 240, 0.1)"
-                glowRadius={16}
-                edgeSensitivity={35}
-              >
-                <a
-                  href="#contact"
-                  onClick={() => setOpen(false)}
-                  className="flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-ink"
-                >
-                  Let's talk
-                </a>
-              </BorderGlow>
-            </div>
           </div>
         </div>
       )}

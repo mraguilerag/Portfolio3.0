@@ -50,9 +50,9 @@ export default function Hero() {
               animate="show"
               custom={0}
               variants={fadeUp}
-              className="mb-3 font-display text-xl font-medium tracking-wide text-violet-400 sm:text-2xl"
+              className="mb-3 font-display text-xl font-light tracking-[0.05em] text-violet-400 sm:text-2xl"
             >
-              HELLO, I'M
+              Hello, I'm
             </motion.p>
 
             <motion.h1
@@ -102,7 +102,7 @@ export default function Hero() {
             >
               <span className="h-px w-8 bg-violet-500/60" />
               <span className="font-display text-base font-medium tracking-[0.1em] text-ink-dim sm:text-lg">
-                UX/UI DESIGNER · FRONT-END IN TRAINING
+                UX/UI DESIGNER
               </span>
             </motion.div>
 
@@ -170,6 +170,16 @@ export default function Hero() {
               );
             })}
           </div>
+
+          <motion.p
+            initial="hidden"
+            animate="show"
+            custom={0.55}
+            variants={fadeUp}
+            className="mt-4 text-xs tracking-wide text-ink-faint"
+          >
+            Front-end in training
+          </motion.p>
         </div>
       </div>
     </section>

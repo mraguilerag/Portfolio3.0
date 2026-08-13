@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute -left-48 top-1/4 z-0 h-72 w-72 rounded-full bg-violet-600/12 blur-[130px]" />
 
       <div className="relative z-10 mx-auto min-h-[100dvh] max-w-7xl">
-        <div className="flex min-h-[100dvh] flex-col justify-center px-6 pb-16 pt-28 lg:pl-32 lg:pr-12 lg:pt-28 xl:pl-44">
+        <div className="flex min-h-[100dvh] flex-col justify-center px-6 pb-16 pt-28 lg:pl-32 lg:pr-12 lg:pt-24 xl:pl-44">
           <div className="mt-6 lg:mt-8">
             <motion.p
               initial="hidden"

@@ -8,6 +8,8 @@ const skills = [
   "Information Architecture",
   "Prototyping",
   "Usability Testing",
+  "Accessibility",
+  "Design Thinking",
 ];
 
 export default function About() {

@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import heroBg from "../assets/hero-bg.png";
-import { heroBubbles } from "../data/skills";
 import DepthText from "./DepthText";
 
 const fadeUp = {
@@ -12,13 +10,6 @@ const fadeUp = {
     transition: { duration: 0.6, delay, ease: "easeOut" as const },
   }),
 };
-
-const bubbleLayout = [
-  { size: 58, marginTop: 0, delay: 0.9 },
-  { size: 43, marginTop: 16, delay: 1.05 },
-  { size: 50, marginTop: 32, delay: 1.2 },
-  { size: 40, marginTop: 43, delay: 1.35 },
-];
 
 export default function Hero() {
   return (
@@ -43,7 +34,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute -left-48 top-1/4 z-0 h-72 w-72 rounded-full bg-violet-600/12 blur-[130px]" />
 
       <div className="relative z-10 mx-auto min-h-[100dvh] max-w-7xl">
-        <div className="flex min-h-[100dvh] flex-col justify-center px-6 pb-16 pt-28 lg:pl-32 lg:pr-12 lg:pt-24 xl:pl-44">
+        <div className="flex min-h-[100dvh] flex-col px-6 pb-16 pt-28 lg:pl-32 lg:pr-12 lg:pt-24 xl:pl-44">
           <div className="mt-6 lg:mt-8">
             <motion.p
               initial="hidden"
@@ -118,68 +109,6 @@ export default function Hero() {
               and bring them to life on the web.
             </motion.p>
           </div>
-
-          <motion.div
-            initial="hidden"
-            animate="show"
-            custom={0.45}
-            variants={fadeUp}
-            className="mt-8"
-          >
-            <a
-              href="#work"
-              className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-violet-600 to-violet-800 px-8 py-4 text-base font-semibold text-white shadow-[0_4px_18px_-6px_rgba(139,63,240,0.3)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_28px_-4px_rgba(139,63,240,0.7)]"
-            >
-              See my work
-              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/20 transition-transform group-hover:translate-x-0.5">
-                <ArrowRight className="h-4 w-4" />
-              </span>
-            </a>
-          </motion.div>
-
-          <div className="mt-[18px] flex flex-wrap items-start gap-4">
-            {heroBubbles.map(({ label, icon: Icon, color }, i) => {
-              const { size, marginTop, delay } = bubbleLayout[i];
-              return (
-                <motion.div
-                  key={label}
-                  initial={{ opacity: 0, y: 16, scale: 0.8 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay, ease: "easeOut" }}
-                  style={{ marginTop }}
-                >
-                  <motion.div
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{
-                      duration: 3 + i * 0.4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                    style={{ width: size, height: size }}
-                    className="flex flex-col items-center justify-center gap-0.5 rounded-full border border-violet-400/10 bg-surface/60 shadow-[0_0_9px_-6px_rgba(139,63,240,0.25)] opacity-80 backdrop-blur-sm transition-opacity hover:opacity-100"
-                  >
-                    <Icon
-                      style={{ color }}
-                      className={`h-4 opacity-80 ${label === "Figma" ? "w-auto" : "w-4"}`}
-                    />
-                    <span className="text-[9px] font-medium text-ink-faint">
-                      {label}
-                    </span>
-                  </motion.div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          <motion.p
-            initial="hidden"
-            animate="show"
-            custom={0.55}
-            variants={fadeUp}
-            className="mt-4 text-xs tracking-wide text-ink-faint"
-          >
-            Front-end in training
-          </motion.p>
         </div>
       </div>
     </section>

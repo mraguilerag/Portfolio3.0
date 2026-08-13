@@ -104,9 +104,9 @@ export default function Hero() {
               variants={fadeUp}
               className="mt-5 max-w-md text-base leading-relaxed text-ink-dim"
             >
-              I design intuitive digital experiences
+              I design fun & intuitive websites,
               <br />
-              and bring them to life on the web.
+              currently exploring AI as part of the process.
             </motion.p>
           </div>
         </div>
